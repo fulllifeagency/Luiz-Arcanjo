@@ -18,7 +18,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-variant-emoji: text; }
 body { margin: 0; background: var(--paper); color: var(--blue); font-family: var(--sans); -webkit-font-smoothing: antialiased; overflow-x: clip; }
 img, video { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -81,7 +81,7 @@ p { line-height: 1.65; }
 .button-row { display: flex; flex-wrap: wrap; gap: 13px; align-items: center; }
 .button { display: inline-flex; align-items: center; justify-content: space-between; gap: 34px; min-height: 58px; padding: 6px 0 12px; border: 0; border-bottom: 1px solid currentColor; border-radius: 0; background: transparent; text-align: left; font-size: 12px; font-weight: 800; letter-spacing: .085em; text-transform: uppercase; line-height: 1.3; transition: color .3s, box-shadow .3s; }
 .button:hover { box-shadow: inset 0 -1px 0 currentColor; }
-.button > span:last-child { width: 34px; height: 34px; border: 1px solid currentColor; border-radius: 50%; display: grid; place-items: center; position: relative; overflow: hidden; font-size: 0; line-height: 1; transition: transform .35s var(--ease); }
+.button > span:last-child { display: inline-grid; place-items: center; position: relative; flex: 0 0 auto; border: 0; background: transparent; overflow: hidden; font-size: 0; line-height: 1; transition: transform .35s var(--ease); }
 .button > span:last-child::before { content: "\2197\FE0E"; font-family: Arial, "Helvetica Neue", sans-serif; font-size: 18px; font-weight: 400; font-variant-emoji: text; line-height: 1; }
 .button:hover > span:last-child { transform: translate(4px, -4px); }
 .button--gold, .button--dark { color: var(--sky); }
@@ -641,7 +641,7 @@ body:is([data-page="historia"],[data-page="contato"],[data-page="igreja"],[data-
 .contact-channel > span { font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 .contact-channel strong { display: block; margin: 65px 0 18px; font-size: clamp(25px,2.5vw,40px); line-height: 1.05; letter-spacing: -.045em; }
 .contact-channel p { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
-.contact-channel b { position: absolute; right: 28px; top: 28px; width: 38px; height: 38px; border: 1px solid currentColor; border-radius: 50%; display: grid; place-items: center; font-weight: 400; }
+.contact-channel b { position: absolute; right: 28px; top: 28px; border: 0; background: transparent; font-weight: 400; }
 .contact-message .invite-form { background: var(--ivory); color: var(--blue); }
 .contact-message .invite-grid__intro a { color: var(--moss); }
 .contact-direct { margin-top: 40px; display: grid; gap: 8px; }
@@ -984,8 +984,8 @@ html.motion-ready [data-reveal].is-visible .display-title + p { opacity: 1; tran
 .discography-rail-head { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin: 30px 0 22px; }
 .discography-status { margin: 0; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .discography-rail-arrows { display: flex; gap: 8px; }
-.discography-rail-arrows button { width: 36px; height: 36px; border: 1px solid rgba(32,45,58,.2); border-radius: 50%; background: transparent; color: var(--blue); font-size: 17px; cursor: pointer; transition: background .2s, color .2s, transform .2s var(--ease); }
-.discography-rail-arrows button:hover { background: var(--blue); color: var(--ivory); transform: scale(1.06); }
+.discography-rail-arrows button { border: 0; padding: 8px; background: transparent; color: var(--blue); font-size: 17px; cursor: pointer; transition: color .2s, transform .2s var(--ease); }
+.discography-rail-arrows button:hover { color: var(--olive); transform: translateX(2px); }
 .release-rail { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(150px, 14vw, 205px); gap: clamp(16px, 2vw, 28px); overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: inline mandatory; scrollbar-width: thin; scrollbar-color: rgba(32,45,58,.24) transparent; padding: 0 0 28px; margin-bottom: clamp(58px, 7vw, 90px); }
 .release-rail .release-card { scroll-snap-align: start; }
 .release-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(26px, 3vw, 48px) clamp(18px, 2.5vw, 36px); }

@@ -38,7 +38,7 @@ def _card(record, context):
     kind = "album" if record["kind"] in {"album", "ep"} else "single"
     meta = f'{_type_label(record)} · {record["year"]}'
     return f'''<a class="release-card release-card--{context}" data-release data-release-context="{context}" data-artist="{record["group"]}" data-type="{kind}" data-date="{record["date"]}" href="{record["url"]}" target="_blank" rel="noopener" hidden>
-      <span class="release-card__visual"><img class="release-card__cover" src="/assets/images/discography/{record["id"]}.jpg" alt="Capa de {title}" loading="lazy"><span class="release-card__listen">Ouvir no Spotify <span aria-hidden="true">↗</span></span></span>
+      <span class="release-card__visual"><img class="release-card__cover" src="/assets/images/discography/{record["id"]}.jpg" alt="Capa de {title}" loading="lazy"><span class="release-card__listen">Ouvir no Spotify <span aria-hidden="true">↗︎</span></span></span>
       <span class="release-card__info"><span>{escape(meta)}</span><strong>{title}</strong></span>
     </a>'''
 
@@ -56,11 +56,11 @@ def selection():
         <div class="discography-control"><span>Trajetória</span><div class="discography-segmented"><button type="button" data-artist-filter="solo" aria-pressed="true">Luiz Arcanjo</button><button type="button" data-artist-filter="band" aria-pressed="false">Trazendo a Arca</button></div></div>
         <div class="discography-control"><span>Formato</span><div class="discography-segmented"><button type="button" data-type-filter="all" aria-pressed="true">Todos</button><button type="button" data-type-filter="album" aria-pressed="false">Álbuns e EPs</button><button type="button" data-type-filter="single" aria-pressed="false">Singles</button></div></div>
       </div>
-      <button class="discography-show-all" type="button" data-discography-open>Ver tudo <span aria-hidden="true">↗</span></button>
+      <button class="discography-show-all" type="button" data-discography-open>Ver tudo <span aria-hidden="true">↗︎</span></button>
       </div>
-      <div class="discography-rail-head"><p class="discography-status" data-discography-status aria-live="polite"></p><div class="discography-rail-arrows" aria-label="Navegar pelos lançamentos"><button type="button" data-rail-prev aria-label="Lançamentos anteriores">←</button><button type="button" data-rail-next aria-label="Próximos lançamentos">→</button></div></div>
+      <div class="discography-rail-head"><p class="discography-status" data-discography-status aria-live="polite"></p><div class="discography-rail-arrows" aria-label="Navegar pelos lançamentos"><button type="button" data-rail-prev aria-label="Lançamentos anteriores">←︎</button><button type="button" data-rail-next aria-label="Próximos lançamentos">→︎</button></div></div>
       <div class="release-rail" data-release-rail>{rail_cards}</div>
-      <div class="discography-section__foot"><p>Capas, títulos, formatos e datas conferidos nas páginas públicas do Spotify. Edições de playback foram removidas.</p><a class="text-link" href="https://open.spotify.com/artist/3jhaArlXRtYY9R7GJrvcZ2" target="_blank" rel="noopener">Luiz Arcanjo no Spotify <span aria-hidden="true">↗</span></a><a class="text-link" href="https://open.spotify.com/artist/1KJkhqZNLx1JY9vXkBhGV5" target="_blank" rel="noopener">Trazendo a Arca no Spotify <span aria-hidden="true">↗</span></a></div>
+      <div class="discography-section__foot"><p>Capas, títulos, formatos e datas conferidos nas páginas públicas do Spotify. Edições de playback foram removidas.</p><a class="text-link" href="https://open.spotify.com/artist/3jhaArlXRtYY9R7GJrvcZ2" target="_blank" rel="noopener">Luiz Arcanjo no Spotify <span aria-hidden="true">↗︎</span></a><a class="text-link" href="https://open.spotify.com/artist/1KJkhqZNLx1JY9vXkBhGV5" target="_blank" rel="noopener">Trazendo a Arca no Spotify <span aria-hidden="true">↗︎</span></a></div>
     </div>
     <dialog class="discography-dialog" data-discography-dialog aria-labelledby="discography-dialog-title"><div class="discography-dialog__panel">
       <div class="discography-dialog__head"><div><span>Discografia completa</span><h3 id="discography-dialog-title" data-discography-dialog-title>Luiz Arcanjo</h3><p data-discography-dialog-meta></p></div><button type="button" data-discography-close aria-label="Fechar discografia">×</button></div>

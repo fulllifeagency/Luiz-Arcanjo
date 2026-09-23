@@ -20,11 +20,11 @@
       '<a class="brand" href="/" aria-label="Luiz Arcanjo — página inicial"><img class="brand__image" src="', lightHeroHeader ? '/assets/images/signature-dark.png' : '/assets/images/signature-light.png', '" alt="Luiz Arcanjo"></a>',
       '<nav class="desktop-nav" aria-label="Navegação principal">',
       '<a href="/">Início</a><a href="/historia/">Biografia</a><a href="/musica/">Discografia</a><a href="/cursos/">Academy</a><a href="/livro/">Loja</a><a href="/conteudos/">Devocionais</a><a href="/igreja/">Igreja</a>',
-      '</nav><a class="header-cta" href="/contato/">Agenda &amp; contato <span aria-hidden="true">↗</span></a>',
+      '</nav><a class="header-cta" href="/contato/">Agenda &amp; contato <span aria-hidden="true">↗︎</span></a>',
       '<button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span></button>',
       '</div><nav class="mobile-menu" id="mobile-menu" aria-label="Navegação móvel" inert><div class="mobile-menu__inner shell">',
       '<a href="/">Início</a><a href="/historia/">Biografia</a><a href="/musica/">Discografia</a><a href="/cursos/">Academy</a><a href="/livro/">Loja</a><a href="/conteudos/">Devocionais</a><a href="/igreja/">Sobre as Águas Church</a><a href="/contato/">Agenda &amp; Contato</a>',
-      '<div class="mobile-menu__social"><a href="', instagram, '" target="_blank" rel="noopener">Instagram ↗</a><a href="', youtube, '" target="_blank" rel="noopener">YouTube ↗</a></div>',
+      '<div class="mobile-menu__social"><a href="', instagram, '" target="_blank" rel="noopener">Instagram ↗︎</a><a href="', youtube, '" target="_blank" rel="noopener">YouTube ↗︎</a></div>',
       '</div></nav></header>'
     ].join("");
   }
@@ -42,7 +42,7 @@
       '<a href="https://music.apple.com/us/artist/luiz-arcanjo/1506654862" target="_blank" rel="noopener" aria-label="Apple Music"><img src="/assets/images/applemusic-icon.svg" alt=""></a>',
       '<a href="https://music.amazon.com.br/artists/B004YRIFEI/luiz-arcanjo" target="_blank" rel="noopener" aria-label="Amazon Music"><img src="/assets/images/amazonmusic-icon.svg" alt=""></a>',
       '</div></div></div>',
-      '<div class="shell footer-bottom"><div><small>© ', new Date().getFullYear(), ' Luiz Arcanjo. Todos os direitos reservados.</small><small>Desenvolvido na França por <a href="https://www.fulllifeweb.fr/br" target="_blank" rel="noopener">Full Life Agency</a>.</small></div><a class="footer-toplink" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a></div></footer>'
+      '<div class="shell footer-bottom"><div><small>© ', new Date().getFullYear(), ' Luiz Arcanjo. Todos os direitos reservados.</small><small>Desenvolvido na França por <a href="https://www.fulllifeweb.fr/br" target="_blank" rel="noopener">Full Life Agency</a>.</small></div><a class="footer-toplink" href="#topo">Voltar ao topo <span aria-hidden="true">↑︎</span></a></div></footer>'
     ].join("");
   }
 
@@ -264,7 +264,7 @@
         heroToggle.setAttribute("aria-label", "Pausar vídeo");
       } else {
         heroVideo.pause();
-        heroToggle.innerHTML = 'Reproduzir <span aria-hidden="true">▶</span>';
+        heroToggle.innerHTML = 'Reproduzir <span aria-hidden="true">▶︎</span>';
         heroToggle.setAttribute("aria-label", "Reproduzir vídeo");
       }
     });
