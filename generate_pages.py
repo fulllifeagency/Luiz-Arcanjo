@@ -130,7 +130,7 @@ page(
     "musica",
     "Música",
     "Ouça Luiz Arcanjo em sua carreira solo e com o Trazendo a Arca. Descubra lançamentos e canais oficiais.",
-    hero("Música", "Do altar <span class=\"nowrap\">aos grandes</span> palcos.<br><em>Uma obra <span class=\"nowrap\">que atravessa</span> gerações.</em>", "Compositor de canções que se tornaram memória coletiva, Luiz Arcanjo construiu uma trajetória entre o Toque no Altar, o Trazendo a Arca e uma carreira solo marcada por fé, poesia e serviço.", "music-hero-cropped.jpg", "Auditório cheio durante apresentação de Luiz Arcanjo", variant="music", video="music-hero.mp4")
+    hero("Música", "Do altar <span class=\"nowrap\">aos grandes</span> palcos.<br><em>Uma obra <span class=\"nowrap\">que atravessa</span> gerações.</em>", "Compositor de canções que se tornaram memória coletiva, Luiz Arcanjo construiu uma trajetória entre o Toque no Altar, o Trazendo a Arca e uma carreira solo marcada por fé, poesia e serviço.", "music-hero-cropped.jpg", "Auditório cheio durante apresentação de Luiz Arcanjo", variant="music", video="music-hero-web.m4v")
     + music_platform_bar()
     + """
     <section class="section-pad section--ivory"><div class="shell music-intro">
