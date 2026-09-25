@@ -23,6 +23,7 @@ body { margin: 0; background: var(--paper); color: var(--blue); font-family: var
 img, video { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 .nowrap { white-space: nowrap; }
+.mobile-title-line { display: inline; }
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 :focus-visible { outline: 2px solid var(--sky); outline-offset: 4px; }
@@ -790,7 +791,12 @@ html.motion-ready [data-reveal].is-visible .display-title + p { opacity: 1; tran
   .site-header.is-scrolled .brand { width: 94px; height: 70px; margin-top: 3px; }
   .site-header.is-scrolled .site-header__inner::after { left: 112px; }
   .section-pad { padding-block: 85px; }
+  h1, h2, h3 { max-width: 100%; overflow-wrap: normal; word-break: normal; hyphens: none; text-wrap: pretty; }
   .display-title { font-size: clamp(47px, 12vw, 73px); }
+  .mobile-title-line { display: block; width: fit-content; max-width: 100%; }
+  .mobile-title-keep { white-space: nowrap; }
+  .mobile-title-wide { font-size: 1.12em; }
+  .desktop-title-break { display: none; }
   .hero, .hero__content { min-height: max(950px, 100svh); }
   .hero__video { display: block; object-position: 67% center; }
   .hero__poster { left: 0; width: 100%; background-size: cover; background-position: 67% center; }
@@ -825,7 +831,15 @@ html.motion-ready [data-reveal].is-visible .display-title + p { opacity: 1; tran
   .image-feature__content, .church-feature__content { order: 1; }
   .image-feature__content, .church-feature__content, .music-panel__body { padding: 75px var(--mobile-pad); }
   .image-feature h2, .church-feature h2, .biography-portrait h2, .music-panel h2 { font-size: clamp(59px, 12vw, 88px); }
-  .church-feature h2 { font-size: clamp(47px, 12vw, 73px); }
+  .church-feature h2 { font-size: clamp(34px, 10.5vw, 47px); }
+  .church-feature h2 em { font-size: 1.05em; }
+  body[data-page="historia"] .centered-cta .display-title,
+  .book-promise .display-title,
+  .book-signature .display-title,
+  .invite-grid__intro .display-title { font-size: clamp(34px, 10.5vw, 47px); }
+  .learning-intro .display-title { font-size: clamp(32px, 9vw, 42px); }
+  .learning-card h2 { font-size: clamp(36px, 10vw, 44px); }
+  .devotional-section-head .display-title { font-size: clamp(36px, 10vw, 44px); }
   .church-feature__content { padding: 85px var(--mobile-pad); }
   .quote-grid { grid-template-columns: 1fr; }
   .quote-mark { font-size: 120px; }
@@ -838,7 +852,7 @@ html.motion-ready [data-reveal].is-visible .display-title + p { opacity: 1; tran
   .story-chapter { min-height: 0; opacity: 1; transform: none; padding: 40px 0 75px; }
   .story-chapter__mobile-photo { display: block; width: 100%; height: min(110vw, 500px); margin-bottom: 34px; }
   .story-chapter__mobile-photo img { object-position: center 28%; }
-  .story-chapter h3 { font-size: clamp(45px, 11vw, 70px); }
+  .story-chapter h3 { font-size: clamp(36px, 10vw, 52px); }
   .book-feature__visual { min-height: 0; height: auto; }
   .book-sales-hero { min-height: 0; display: flex; flex-direction: column; align-items: stretch; background: #dddfe3; }
   .book-sales-hero__media { position: relative; inset: auto; width: 100%; height: min(84vw,520px); order: 0; }
@@ -939,7 +953,7 @@ html.motion-ready [data-reveal].is-visible .display-title + p { opacity: 1; tran
   .inner-hero--contact .inner-hero__photo img { object-position: 51% center; }
   .inner-hero--contact .inner-hero__shade { inset: 0; height: 100%; background: linear-gradient(0deg,rgba(8,22,31,.95) 0%,rgba(8,22,31,.72) 43%,rgba(8,22,31,.17) 78%); }
   .inner-hero--contact .inner-hero__content { padding-top: 170px; padding-bottom: clamp(175px,24vh,220px); }
-  .inner-hero--contact h1 { max-width: 100%; font-size: clamp(44px,11.5vw,62px); }
+  .inner-hero--contact h1 { max-width: calc(100vw - (2 * var(--mobile-pad))); font-size: clamp(34px,9.2vw,42px); }
   .inner-hero--contact h1 em { font-size: 1.35em; }
   .inner-hero--contact p:not(.eyebrow) { max-width: 100%; font-size: 20px; }
   .music-panel--solo .music-panel__image { min-height: 540px; height: 67vh; }
@@ -951,6 +965,7 @@ html.motion-ready [data-reveal].is-visible .display-title + p { opacity: 1; tran
   body[data-page="contato"].menu-open .site-header:not(.is-scrolled) .site-header__inner::after { background: rgba(255,255,255,.22); }
   .social-grid { gap: 0; }
   .footer-top { min-height: 0; padding-block: 85px 65px; align-items: flex-start; flex-direction: column; gap: 60px; }
+  .footer-top p { font-size: clamp(35px, 11vw, 44px); }
   .footer-middle { grid-template-columns: 1fr; gap: 45px; }
   .footer-channels { align-items: flex-start; }
   .footer-bottom { flex-direction: column; }
@@ -961,7 +976,7 @@ html.motion-ready [data-reveal].is-visible .display-title + p { opacity: 1; tran
   .church-feature h2 { font-size: 47px; }
   .church-visit__details > div { grid-template-columns: 1fr; gap: 10px; }
   .inner-hero h1 { font-size: 52px; }
-  .inner-hero--contact h1 { font-size: clamp(34px,9.5vw,40px); }
+  .inner-hero--contact h1 { font-size: clamp(32px,9.2vw,36px); }
   .inner-hero--contact h1 em { font-size: 1.65em; }
   .footer-main { grid-template-columns: 1fr 1fr; }
 }
@@ -1089,6 +1104,6 @@ html.motion-ready .image-feature__visual.image-reveal.is-visible:hover img { tra
   .inner-hero--contact h1 { font-size: 32px; }
   .inner-hero--contact h1 em { font-size: 1.65em; }
   .inner-hero--stories h1, body[data-page="conteudos"] .inner-hero h1 { font-size: 48px; }
-  .learning-card h2 { font-size: 40px; }
+  .learning-card h2 { font-size: 36px; }
   .display-title { font-size: 42px; }
 }

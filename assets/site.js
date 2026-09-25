@@ -33,7 +33,7 @@
   if (footerTarget) {
     footerTarget.innerHTML = [
       '<footer class="site-footer">',
-      '<div class="shell footer-top"><a class="footer-signature" href="/" aria-label="Luiz Arcanjo — página inicial"><img src="/assets/images/signature-light.png" alt="Luiz Arcanjo"></a><p>Uma vida dedicada a <em>servir.</em></p></div>',
+      '<div class="shell footer-top"><a class="footer-signature" href="/" aria-label="Luiz Arcanjo — página inicial"><img src="/assets/images/signature-light.png" alt="Luiz Arcanjo"></a><p><span class="mobile-title-line">Uma vida</span> <span class="mobile-title-line mobile-title-keep">dedicada a <em>servir.</em></span></p></div>',
       '<div class="shell footer-middle"><nav class="footer-map" aria-label="Mapa do site"><a href="/">Início</a><a href="/historia/">Biografia</a><a href="/musica/">Discografia</a><a href="/cursos/">Academy</a><a href="/livro/">Loja</a><a href="/conteudos/">Devocionais</a><a href="/igreja/">Sobre as Águas</a><a href="/contato/">Agenda &amp; Contato</a></nav>',
       '<div class="footer-channels"><span>Acompanhe e ouça</span><div class="footer-channels__icons">',
       '<a href="', instagram, '" target="_blank" rel="noopener" aria-label="Instagram"><img src="/assets/images/instagram-icon.svg" alt=""></a>',
